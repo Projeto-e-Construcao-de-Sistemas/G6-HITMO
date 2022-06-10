@@ -1,0 +1,90 @@
+<!--<?php
+session_start();
+include('conexao.php');
+include('verificaLogin.php');
+
+/*$nome = trim($_POST['nome']);
+$cpf = trim($_POST['cpf']);
+$email = trim($_POST['email']);
+$password = trim(md5($_POST['password']));*/
+
+
+$nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
+$cpf = mysqli_real_escape_string($conexao, trim($_POST['cpf']));
+$email = mysqli_real_escape_string($conexao, trim($_POST['email']));
+$senha = mysqli_real_escape_password($conexao, trim(md5($_POST['senha'])));
+
+$sql = "select count(*) as total from usuario where usuario = '$usuario'";
+$resul = mysqli_query($conexao, $sql);
+$row = mysqli_fetch_assoc($result);
+
+if($row['total'] == 1){
+    $_SESSION['usuario_existe'] = true;
+    header('Location: cadastro.php');
+    exit;
+}
+
+$sql = "INSERT INTO usuario (nome,cpf, email, senha) VALUES ('$nome', '$cpf', '$email', '$senha')";
+
+if($conexao->query($sql)=== TRUE){
+    $_SESSION['status_cadastro'] = true;
+}
+$conexao->close();
+header('Location: boleto.php');
+exit;
+
+?>-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script  src="../js/jsBDjson.js"></script>
+    <script  src="../js/jsCadastro.js"></script>
+
+    <title>Cadastro Aluno</title>
+</head>
+<body>
+    <div id = "container">
+        <h1><img src="../img/essa.png" alt="logo"></h1>
+        <form action="cadastro.html" method="post" id="registrar-form">
+            <div class="box-conteiner">
+
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required="required">
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required="required" onblur="geral()">
+                <p id="msgemail"></p>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required="required">
+
+                <label for="matricula">Matricula:</label>
+                <input type="number" name="matricula" id="matricula" placeholder="Digite sua Matricula" required="required">
+
+                <label for="password">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite uma Senha" required="required" onblur="geral()">
+
+                <label for="passwordConfirma">Confirmação de senha:</label>
+                <input type="password" name="passwordConfirma" id="senhaConfirma" placeholder="Digite sua Confirmação de senha" required="required" onblur="geral()">
+                <p id="Psenha"></p>
+            </div>
+            <input type="submit" id="btn-submit" value="Registrar" onclick="registrarUsuario()">
+        </form>
+        <p id="atention"></p>
+        <a id= "sair" href="index.html"><button>Voltar</button></a>
+    </div>
+    <p class="msg-erro template"></p>
+    <footer>
+        
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

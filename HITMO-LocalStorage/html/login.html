@@ -1,0 +1,70 @@
+<!--<?php
+    session_start();
+    Include{'conexao.php'};
+
+    if{
+        empty($_POST['usuario']) || empty($_POST['senha']){
+            header('Location: index.php');
+            exit();
+        }
+    }
+
+    $usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
+    $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+
+    $query = "selec usuario_id, usuario from usuario where usuario = '{$usuario}' and senha = md5{'{$senha}'}";
+    /*echo testo*/
+    //echo $query;exit;
+    $result = mysqli_query{$conexao, $query};
+
+    //linhas
+    $row = mysqli_nun_rows($result);
+
+    if($row == 1){
+        $_SESSION['usuario'] = $usuario;
+        header('Location: serie.html');
+        exit();
+    }else{
+        header('Location: login.php');
+        exit();
+    }
+
+
+?>-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script  src="../js/jsBDjson.js"></script>
+    <script  src="../js/jsLogin.js"></script>
+
+    <title>Login</title>
+</head>
+<body>
+    <div id = "container">
+        <h1><img src="../img/essa.png" alt="logo"></h1>
+        <div id="registrar-form">
+            <div class="box-conteiner">
+
+                <label for="login">Login:</label>
+                <input type="text" name="login" id="login" placeholder="Digite seu login">
+
+                <label for="password">Senha:</label>
+                <input type="password" name="senhaLogin" id="senhaLogin" placeholder="Senha">
+                <p id="textoLogin"></p>
+
+            </div>
+            <input type="submit" id="btn-submit" value="Logar" onclick="verificarLogin()">
+
+        </div>
+        <a href="cadastro.html"><button id="cadastro">Registrar</button></a>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
