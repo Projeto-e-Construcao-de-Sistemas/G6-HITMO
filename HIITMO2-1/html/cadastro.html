@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Cadastro Aluno</title>
+</head>
+<body>
+    <div id = "container">
+        <h1><img src="../img/essa.png" alt="logo"></h1>
+        <form action="cadastro.html" method="post" id="registrar-form">
+            <div class="box-conteiner">
+
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required="required">
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required="required" onblur="geral()">
+                <p id="msgemail"></p>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" required="required">
+
+                <label for="matricula">Matricula:</label>
+                <input type="number" name="matricula" id="matricula" placeholder="Digite sua Matricula" required="required">
+
+                <select name="tipo" id="tipo">
+                    <option value="gerenteG">Gerente</option>
+                    <option value="instrutor">Instrutor</option>
+                    <option value="aluno" selected>Aluno</option>
+                </select>
+                <p id="Psenha"></p>
+            </div>
+            <input type="submit" id="btn-submit" value="Registrar" onclick="registrarUsuario()">
+        </form>
+        <p id="atention"></p>
+        <a id= "sair" href="index.html"><button>Voltar</button></a>
+    </div>
+    <footer>
+        
+    </footer>
+    <script  src="../js/jsBDjson.js" ></script>
+    <script  src="../js/jsCadastro.js"></script>
+</body>
+</html>
