@@ -1,0 +1,56 @@
+/*config apitempo*/
+.flex {
+    align-items: center;
+    margin: 0;
+}
+h4.temp {
+    padding: 1em;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-right: 2em;
+}
+.description {
+    text-transform: capitalize;
+    margin-right: 9em;
+    color: white;
+}
+.humidity{
+    color: white;
+    margin-right: 7em;
+
+}
+.wind{
+    color: white;
+    margin-right: 6em;
+    margin-bottom: 1em;
+}
+.weather{
+    visibility: visible;
+    color: white;
+    display: inline-block;
+    flex-direction: column;
+    padding: 2vh;
+    margin: 0;
+    align-items: center;
+}
+.card {
+    background: linear-gradient(45deg, black, transparent);
+    color: black;
+    border-radius: 21px;
+}
+.total{
+    text-align: center;
+    width: 100%;
+    margin-top: 0.5%;
+    max-width: 450px;
+}
+
+h3.city {
+    margin-right: 2em;
+    align-items: center;
+    margin-top: 3px;
+    text-align: center;
+    color: white;
+}
+
