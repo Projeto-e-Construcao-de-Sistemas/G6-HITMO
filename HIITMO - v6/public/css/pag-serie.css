@@ -1,0 +1,42 @@
+form#form-serie{
+    padding: 9px;
+    text-align: left;
+}
+
+form#form-serie button{
+    text-align: center;
+    width: 45%;
+}
+
+div.lado-lado{
+    display: flex;
+    width: 100%;
+}
+
+div.lado-lado label{
+    margin: auto;
+    margin: 3px;
+    text-align: center;
+}
+
+div.lado-lado button{
+    margin: auto;
+    margin-left: 6px;
+    text-align: center;
+}
+
+input#btn-submit-evento{
+    margin-bottom: 1px;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+table tr, th{
+    border: hidden;
+}
+
+div.bloco-cont button.btn-medio{
+    background-color: black;
+}

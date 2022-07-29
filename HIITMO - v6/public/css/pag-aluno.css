@@ -1,0 +1,9 @@
+div.bloco-serie table{
+    width: 90%;
+    max-width: 400px;
+    table-layout: fixed;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    display: inline-table;
+}

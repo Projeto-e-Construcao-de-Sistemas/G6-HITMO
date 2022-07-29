@@ -1,0 +1,9 @@
+tableSerie.innerHTML = `
+            <h5>Exercicio - Quantidade - Repeticoes</h5>
+        `
+        /////////////////////////
+        for (let i in serie.ficha) {
+            tableSerie.innerHTML+=`
+
+                    <h5>${serie.ficha[i].exercicio} - ${serie.ficha[i].quantidade} - ${serie.ficha[i].repeticoes}</h5>
+            `;

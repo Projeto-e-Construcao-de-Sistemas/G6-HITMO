@@ -1,0 +1,56 @@
+/*css do bloco da tela inicial*/
+#container{
+    color: aliceblue;
+    border-radius: 9px;
+    width: 50%;
+    margin-right: 0.5%;
+    margin-top: 0.5%;
+    transition: 0.5s;
+    
+}
+.bloco-inicio{  
+    margin: 3px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+}
+.bloco-inicio h1, h2, h3, h4{
+    text-align: center;
+    font-size: 1.6rem;
+    color: aliceblue;
+}
+
+.bloco-cont button{
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*css dos itens criados*/
+.bloco-cont{
+    margin: 3px;
+    background-color: #323232;
+    border-radius: 10px;
+}
+
+div#\#container{
+    transition: 1s;
+    text-align: -webkit-center;
+}
+
+div.bloco-inicio-lateral{
+    width: 100%;
+    max-width: 450px;
+}
+
+div.bloco-inicio-lateral div.bloco-cont{
+    color: aliceblue;
+    background: dimgray;
+}
+
+@media only screen  and (min-width: 1100px){ 
+    div#\#container{
+     display: flex;
+     margin-left: 8%;
+     margin-right: 8%;
+    }   
+}
