@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style-area.css">
+    
+
+    <title>Serie</title>
+</head>
+<body onblur="tipoUsuario()">
+    <div id="barra-nav">
+        <ul>
+            <li><img src="../img/icone-barra.png" alt="logo">
+                <li><a href="serie.html">Series</a>
+                <li><a href="aulas.html">Aulas</a>
+                <li><a href="perfil.html">Perfil</a>
+        </ul>
+    </div>
+    <div id="container">
+        <h1><img src="../img/treinoS.png" alt="simbolo-serie"></h1>
+
+        <div class="aluno">
+           
+        </div>
+        <div class="instrutor">
+            <div class="box-container">
+            
+
+                <label for="email">Digite o E-mail do solicitante:</label>
+                <input type="email" name="email-solicitante" id="email-solicitante" placeholder="E-mail Aluno" required="required">
+
+                <label for="matricula">Digite a matricula do solicitante:</label>
+                <input type="number" name="matricula" id="matricula" placeholder="Matricula Aluno" required="required">
+                
+                <label for="text">Digite o nome do exercicio e a quantidade</label>
+                <input id="nova-serie" nome="text" rows="9" cols="75"></input>
+                <p id="msgSerie"></p>
+
+                <input type="submit" id="btn-submit" value="Registrar" onclick="cadastrarSerie()">
+    
+        </div>
+
+        </div>
+
+    </div>
+    <script  src="../js/jsTipousuario.js"></script>
+    <script  src="../js/jsSeries.js"></script>
+</body>
+<script>
+    tipoUsuario();
+</script>
+</html>

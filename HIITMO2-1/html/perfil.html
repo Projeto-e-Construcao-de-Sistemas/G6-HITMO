@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style-area.css">
+
+    <title>Perfil</title>
+</head>
+<body onload="preencherCampos()">
+    <div id="barra-nav">
+            <ul>
+                <div class="gerenteG">
+                    <li><img src="../img/icone-barra.png" alt="logo">
+                    <li><a href="instrutores.html">Instrutores</a>
+                    <li><a href="aluno.html">Alunos</a>
+                </div>
+                <div class="instrutor">
+                    <li><img src="../img/icone-barra.png" alt="logo">
+                    <li><a href="serie.html">Series</a>
+                    <li><a href="aulas.html">Aulas</a>
+                </div>
+                <div class="aluno">
+                    <li><img src="../img/icone-barra.png" alt="logo">
+                    <li><a href="serie.html">Series</a>
+                    <li><a href="aulas.html">Aulas</a>
+                </div>
+            </ul>
+    </div>
+    <div id="container">
+        <h1><img src="../img/icone-perfil-p.png" alt="simbolo-perfil"></h1>
+        <div class="perfil">
+
+                <label for="name">Nome:</label>
+                <input id="nome" type=text disabled>
+                <label for="email">E-mail:</label>
+                <input id="email" type="text" disabled>
+                <label for="cpf">CPF:</label>
+                <input id="cpf" type=text disabled>
+                <label for="matricula">Matricula:</label>
+                <input id="matricula" type="text" disabled>
+                <div id="altera-senha">
+                    <label for="senha">Senha:</label>
+                    <input id="senha" type="password">
+                    <label for="senha">Nova Senha:</label>
+                    <input id="novaSenha" type="password">
+                </div>
+                <p id="atention"></p>
+                <button id="sair" onclick="fazerLogOff()">Logoff</button>
+                <button id="sair" onclick="mudarSenha()">Alterar Senha</button>
+        </div>
+    </div>
+    
+    <div>
+        <footer>
+        
+        </footer>
+    </div>
+
+    <script  src="../js/jsPerfil.js"></script>
+    <script  src="../js/jsTipousuario.js"></script>
+</body>
+<script>
+    tipoUsuario();
+</script>
+
+</html>
